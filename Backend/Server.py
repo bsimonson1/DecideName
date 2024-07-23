@@ -18,15 +18,7 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = '*'
 
-client = pymongo.MongoClient("mongodb+srv://ben:schedulesorcerer1@schedulesorcerery.b4wjqxl.mongodb.net/?retryWrites=true&w=majority")
-db = client["UserInformation"]
-login_collection = db["LoginSignupInfo"]
-# bcrypt = Bcrypt(app)
 
-app.secret_key = 'your_secret_key'
-# insert Shounak's SID and AUTH TOKEN and make sure to change system settings instead of directly inputting SID and token into command
-account_sid = 'AC00a2774157fb4177fdb3ec186ed36dce' # SID: AC00a2774157fb4177fdb3ec186ed36dce
-auth_token = '4f5eae63ef51d4da9d0e205745e52ffb' # TOKEN: 4f5eae63ef51d4da9d0e205745e52ffb
 twilio_client = Client(account_sid, auth_token)
 
 def generate_random_verification_code():
