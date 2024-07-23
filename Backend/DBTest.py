@@ -14,9 +14,7 @@ def globalTest():
 
 def woo():
 
-   client = pymongo.MongoClient("mongodb+srv://ben:schedulesorcerer1@schedulesorcerery.b4wjqxl.mongodb.net/?retryWrites=true&w=majority")
-   db = client["UserInformation"]
-   login_collection = db["LoginSignupInfo"]
+   
     # grab the session user email and password for datbase check
    
    globalTest()
